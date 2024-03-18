@@ -1,0 +1,32 @@
+{{> Header }}
+
+<h1>All Pokeymanz</h1>
+
+{{# unless pokemon }}
+<p>No Pokemon in the database! Please add one first.</p>
+{{ else }}
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Type</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{# each pokemon }}
+		<tr pokemon-id="{{ id }}">
+			<td>
+				<a href="{{ path 'pokemon/:id' id }}" class="{{ name }}">
+					{{ name }}
+				</a>
+			</td>
+			<td>
+				{{ type }}
+			</td>
+		</tr>
+		{{/each}}
+	</tbody>
+</table>
+{{/ unless }}
+
+{{> Footer }}

@@ -1,0 +1,23 @@
+{
+  "name": "3.3-testing",
+  "scripts": {
+    "server": "nodemon -L --watch 'src/**/*.ts' --exec 'tsx' src/server.ts",
+    "test": "npx playwright test",
+    "test:ui": "npx playwright test --ui-host=0.0.0.0 --ui-port=3001"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.11",
+    "@types/node": "^20.11.10",
+    "dotenv": "^16.4.5",
+    "handlebars": "^4.7.8",
+    "jest": "^29.7.0",
+    "prettier": "^3.2.4",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.3.3",
+    "nodemon": "^3.0.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.42.1"
+  }
+}
